@@ -23,15 +23,15 @@ func main() {
 	}
 	//results["gello"] = "Hello"
 	for _, url := range urls {
-		result := "OK"
+		request := "OK"
 		err := hitURL(url)
 		if err != nil {
-			result = "FAILED"
+			request = "FAILED"
 		}
-		results[url] = result
+		results[url] = request
 	}
-	for url, result := range results {
-		fmt.Println(url, result)
+	for url, request := range results {
+		fmt.Println(url, request)
 	}
 }
 
